@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
-import { CouseService } from '../services/CourseService'
+import { CourseService } from '../services/CourseService'
 
-const courseService = new CouseService()
+const courseService = new CourseService()
 
 export class CouseController {
 
