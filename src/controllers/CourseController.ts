@@ -5,11 +5,11 @@ const courseService = new CourseService()
 
 export class CourseController {
 
-    createCourse(request: Request, response: Response) {
+    async createCourse(request: Request, response: Response) {
 
         const { title, educator, description } = request.body
 
-        courseService.createCourse(title, educator, description)
+        await courseService.createCourse(title, educator, description)
 
         try {
             return response.status(200).json({ message: 'Course created!' })
