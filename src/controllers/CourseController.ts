@@ -19,4 +19,18 @@ export class CourseController {
 
     }
 
+    async getCourseByEducator(request: Request, response: Response) {
+
+        const { educator } = request.body
+
+        const courseDatabase = await courseService.getCourseByEducator(educator)
+
+        try {
+            return response.status(200).json(courseDatabase)
+        } catch(error) {
+            return response.status(400).json(error)
+        }
+
+    }
+
 }

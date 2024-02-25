@@ -10,4 +10,8 @@ export class CourseService {
 
     }
 
+    async getCourseByEducator(educator: string) {
+
+    }
+
 }
