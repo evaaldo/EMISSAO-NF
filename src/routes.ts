@@ -13,3 +13,4 @@ router.get('/', (request: Request, response: Response) => {
 // Course Routes
 
 router.post('course', courseController.createCourse)
+router.get('course', courseController.getCourseByEducator)
