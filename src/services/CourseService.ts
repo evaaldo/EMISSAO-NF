@@ -12,6 +12,10 @@ export class CourseService {
 
     async getCourseByEducator(educator: string) {
 
+        const courseDatabase = await sql`SELECT * FROM courses WHERE educator = ${educator}`
+
+        return courseDatabase
+
     }
 
 }
