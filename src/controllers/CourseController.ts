@@ -33,4 +33,18 @@ export class CourseController {
 
     }
 
+    async deleteCourseByTitle(request: Request, response: Response) {
+
+        const { title } = request.body
+
+        await courseService.deleteCourseByTitle(title)
+
+        try {
+            return response.status(200).json({ message: `Course ${title} deleted!` })
+        } catch(error) {
+            return response.status(400).json(error)
+        }
+
+    }
+
 }
