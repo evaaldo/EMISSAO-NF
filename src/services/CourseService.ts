@@ -18,4 +18,10 @@ export class CourseService {
 
     }
 
+    async deleteCourseByTitle(title: string) {
+
+        await sql`DELETE FROM courses WHERE title = ${title}`
+
+    }
+
 }
