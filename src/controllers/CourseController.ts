@@ -47,4 +47,10 @@ export class CourseController {
 
     }
 
+    async updateCourse(request: Request, response: Response) {
+
+        const { title, educator } = request.body
+
+    }
+
 }
