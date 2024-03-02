@@ -52,6 +52,14 @@ export class CourseController {
         const { title, educator } = request.body
         const id = request.params.id
 
+        await courseService.updateCourse(id, title, educator)
+
+        try {
+            return response.status(200).json({ message: 'Course updated!' })
+        } catch(error) {
+            return response.status(400).json(error)      
+        }
+
     }
 
 }
