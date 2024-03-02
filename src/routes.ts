@@ -15,4 +15,4 @@ router.get('/', (request: Request, response: Response) => {
 router.post('/course', courseController.createCourse)
 router.get('/course', courseController.getCourseByEducator)
 router.delete('/course', courseController.deleteCourseByTitle)
-router.put('/course', courseController.updateCourse)
+router.put('/course/:id', courseController.updateCourse)
