@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import { sql } from "../database/connection";
 
-export class verifyExistence {
+export class VerifyExistence {
 
     async verifyIfCourseExists(request: Request, response: Response, next: NextFunction) {
 
