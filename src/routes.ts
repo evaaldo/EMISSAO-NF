@@ -16,5 +16,6 @@ router.get('/', (request: Request, response: Response) => {
 
 router.post('/course', verifyExistence.verifyIfCourseAlreadyExists, courseController.createCourse)
 router.get('/course', verifyExistence.verifyIfCourseExists, courseController.getCourseByEducator)
+router.get('/course', courseController.getAllCourses)
 router.delete('/course', verifyExistence.verifyIfCourseExists, courseController.deleteCourseByTitle)
 router.put('/course/:id', verifyExistence.verifyIfCourseExists, courseController.updateCourse)
