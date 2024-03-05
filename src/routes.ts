@@ -1,6 +1,6 @@
 import { Router, Request, Response } from 'express'
 import { CourseController } from './controllers/CourseController'
-import { VerifyExistence } from './middlewares/verifyExistence'
+import { VerifyExistence } from './middlewares/VerifyExistence'
 
 export const router = Router()
 const courseController = new CourseController()
