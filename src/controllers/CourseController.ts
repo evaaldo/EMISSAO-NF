@@ -33,6 +33,22 @@ export class CourseController {
 
     }
 
+    async getAllCourses(request: Request, response: Response) {
+
+        try {
+
+            const courses = await courseService.getAllCourses()
+
+            return response.status(200).json(courses)
+
+        } catch(error) {
+
+            return response.status(400).json(error)
+
+        }
+
+    }
+
     async deleteCourseByTitle(request: Request, response: Response) {
 
         const { title } = request.body
