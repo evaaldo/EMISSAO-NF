@@ -16,6 +16,14 @@ export class CourseService {
 
     }
 
+    async getAllCourses() {
+
+        const coursesDatabase = await sql`SELECT * FROM courses`
+
+        return coursesDatabase
+
+    }
+
     async deleteCourseByTitle(title: string) {
 
         await sql`DELETE FROM courses WHERE title = ${title}`
