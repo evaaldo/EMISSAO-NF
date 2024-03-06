@@ -18,4 +18,5 @@ router.post('/course', verifyExistence.verifyIfCourseAlreadyExists, courseContro
 router.get('/course', verifyExistence.verifyIfCourseExists, courseController.getCourseByEducator)
 router.get('/course', courseController.getAllCourses)
 router.delete('/course', verifyExistence.verifyIfCourseExists, courseController.deleteCourseByTitle)
+router.delete('/course', courseController.deleteCourseByEducator)
 router.put('/course/:id', verifyExistence.verifyIfCourseExists, courseController.updateCourse)
