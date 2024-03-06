@@ -78,4 +78,18 @@ export class CourseController {
 
     }
 
+    async deleteCourseByEducator(request: Request, response: Response) {
+
+        const { educator } = request.body
+
+        await courseService.deleteCourseByEducator(educator)
+
+        try {
+            return response.status(200).json({ message: 'Courses deleted!' })
+        } catch(error) {
+            return response.status(400).json(error)
+        }
+
+    }
+
 }
