@@ -36,4 +36,10 @@ export class CourseService {
 
     }
 
+    async deleteCourseByEducator(educator: string) {
+
+        await sql`DELETE * FROM courses WHERE educator = ${educator}`
+
+    }
+
 }
