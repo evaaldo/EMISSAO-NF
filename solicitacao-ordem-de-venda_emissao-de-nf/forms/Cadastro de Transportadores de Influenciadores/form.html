@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	</head>
+	<body>
+		<div class="fluig-style-guide">
+			<form name="form" role="form">
+				<input type="hidden" name="descritor" />
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+				        <h3 class="panel-title fs-txt-center">Cadastro de Transportadores de Influenciadores</h3>
+				    </div>
+				    <div class="panel-body">
+				    	<div class="row">
+				    		<div class="col-sm-2">
+				    			<div class="form-group">
+					    			<label for="centro">Centro</label>
+						    		<select name="centro" id="centro" class="form-control" dataset="DSCadastroCentroEmissorOrganizacaoVendaLocalNegocio" datasetkey="centroEmissor" datasetvalue="centroEmissor" addblankline="true">
+						    			<option/>
+						    		</select>
+					    		</div>
+				    		</div>
+				    		<div class="col-sm-3">
+				    			<div class="form-group">
+					    			<label for="codigoBP">Código BP (Transportadora)</label>
+						    		<input type="text" name="codigoBP" id="codigoBP" class="form-control" onchange="Formulario.verificarCodigoBP()" />
+					    		</div>
+				    		</div>
+				    		<div class="col-sm-3">
+				    			<div class="form-group">
+					    			<label for="razaoSocial">Razão Social</label>
+						    		<input type="text" name="razaoSocial" id="razaoSocial" class="form-control" readonly />
+					    		</div>
+				    		</div>
+				    		<div class="col-sm-3">
+				    			<div class="form-group">
+					    			<label for="funcaoParceiro">Tipo PN</label>
+						    		<input type="text" name="tipoPn" id="tipoPn" class="form-control" readonly />
+					    		</div>
+				    		</div>
+				    	</div>
+				    </div>
+			    </div>
+			</form>
+		</div>
+		<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+		<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+		<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
+		<script type="text/javascript" src="./form.js"></script>
+	</body>
+</html>
