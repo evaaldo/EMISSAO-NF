@@ -12,3 +12,10 @@
 	<li>Dapper</li>
 	<li>SQL</li>
 </ul>
+
+<h4>✦ Endpoints</h4>
+<ul>
+    <li>"/auth" => POST - Verificar cliente e gerar token JWT</li>
+    <li>"/costumer" => POST - Registrar cliente o banco de dados</li>
+    <li>"/costumer" => GET - Buscar todos os clientes registrados no banco de dados</li>
+</ul>
