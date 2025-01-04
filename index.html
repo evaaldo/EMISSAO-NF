@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="body-form">
+    <div class="form">
+        <p class="title">Login </p>
+        <p class="message">Signin now and get full access to our app. </p>                
+        <label>
+            <input id="username" required="" placeholder="" type="text" class="input">
+            <span>Username</span>
+        </label>            
+        <label>
+            <input id="password" required="" placeholder="" type="password" class="input">
+            <span>Password</span>
+        </label>
+        <button class="submit" onclick="Authorization.authCostumer()">Submit</button>
+        <p class="signin">Don't have an acount ? <a href="signup.html">Signup</a> </p>
+    </div>
+    <script src="./js/Authorization.js"></script>
+    <script src="./js/Connection.js"></script>
+    <script src="./js/Register.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

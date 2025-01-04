@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="body-form">
+    <form class="form">
+        <p class="title title-register">Register </p>
+        <p class="message">Signup now and create a credential to our app. </p>
+            <div class="flex">
+            <label>
+                <input id="username" required="" placeholder="" type="text" class="input">
+                <span>Username</span>
+            </label>
+
+            <label>
+                <input id="cpf" required="" placeholder="" type="text" class="input">
+                <span>CPF</span>
+            </label>
+        </div>  
+                
+        <label>
+            <input id="email" required="" placeholder="" type="email" class="input">
+            <span>Email</span>
+        </label> 
+            
+        <label>
+            <input id="password" required="" placeholder="" type="password" class="input">
+            <span>Password</span>
+        </label>
+        <label>
+            <input id="confirmPassword" required="" placeholder="" type="password" class="input">
+            <span>Confirm password</span>
+        </label>
+        <button class="submit submit-register" onclick="Register.registerCostumer()">Submit</button>
+        <p class="signup">Already have an acount ? <a href="index.html">Signin</a> </p>
+    </form>
+    <script src="./js/Authorization.js"></script>
+    <script src="./js/Connection.js"></script>
+    <script src="./js/Register.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
