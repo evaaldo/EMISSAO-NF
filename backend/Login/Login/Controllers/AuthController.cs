@@ -79,5 +79,42 @@ namespace Login.Controllers
 
             return tokenString;
         }
+
+        [HttpGet("validate-token/{token}")]
+        public ActionResult ValidateToken(string token)
+        {
+            if(string.IsNullOrWhiteSpace(token))
+            {
+                return BadRequest("Nenhum token foi passado");
+            };
+
+            try
+            {
+                var key = Encoding.ASCII.GetBytes(Key.Secret);
+                var tokenHandler = new JwtSecurityTokenHandler();
+                var validationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
+                    ClockSkew = TimeSpan.Zero
+                };
+
+                tokenHandler.ValidateToken(token, validationParameters, out SecurityToken validatedToken);
+                return Ok("Token válido");
+
+            }
+            catch (SecurityTokenException ex)
+            {
+                _logger.LogWarning(ex, "Token inválido");
+                return Unauthorized("Token inválido");
+            }
+            catch(Exception ex)
+            {
+                _logger.LogError(ex, "Erro ao validar o token");
+                return StatusCode(500, "Erro interno do servidor");
+            }
+        }
     }
 }
