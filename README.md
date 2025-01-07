@@ -20,3 +20,12 @@
     <li>"/costumer" => POST - Registrar cliente o banco de dados</li>
     <li>"/costumer" => GET - Buscar todos os clientes registrados no banco de dados</li>
 </ul>
+
+<h4>✦ Imagens do frontend</h4>
+
+<ul>
+    <li>Login: <img src="./img/Login.png"></img></li>
+    <li>Register: <img src="./img/Register.png"></img></li>
+    <li>Home: <img src="./img/Home.png"></img></li>
+    <li>Unauthorized: <img src="./img/Unauthorized.png"></img></li>
+</ul>
