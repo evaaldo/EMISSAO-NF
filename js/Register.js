@@ -24,7 +24,7 @@ var Register = {
             "Password": this.password(),
         }
 
-        Connection.requestToApi("costumer", body, "Text");
+        Connection.requestToApi("costumer", body, "Text", "POST");
     }
 
 };

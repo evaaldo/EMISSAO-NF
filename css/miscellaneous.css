@@ -1,0 +1,17 @@
+.btn {
+    padding: .25em 1em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: rgb(56, 90, 194);
+    color: white;
+    transition: .35s;
+}
+
+.btn-primary:hover {
+    background-color: rgb(25, 68, 196);
+}

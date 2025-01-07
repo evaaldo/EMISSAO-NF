@@ -1,17 +1,24 @@
 var Connection = {
-
-    requestToApi: async function(endpoint,body,devolve) {
+    requestToApi: async function(endpoint, body, devolve, method) {
         try {
-            var response = await fetch(`http://localhost:82/${endpoint}`, {
-                method: "POST",
+            // Configuração básica da requisição
+            var requestConfig = {
+                method: method,
                 headers: {
                     "Content-type": "application/json"
-                },
-                body: JSON.stringify(body)
-            });
-    
+                }
+            };
+
+            if (body) {
+                requestConfig.body = JSON.stringify(body);
+            }
+
+            var response = await fetch(`http://localhost:82/${endpoint}`, requestConfig);
+
+            console.log(response);
+
             if (!response.ok) {
-                throw new Error("Erro na requisição");
+                return "Erro na requisição";
             }
 
             var responseHandlers = {
@@ -19,14 +26,13 @@ var Connection = {
                 "Text": () => response.text()
             };
 
-            if(responseHandlers[devolve]) {
+            if (responseHandlers[devolve]) {
                 return await responseHandlers[devolve]();
             } else {
                 throw new Error("Erro na requisição");
             }
         } catch (e) {
             throw new Error(`Erro: ${e}`);
-        }        
-    }    
-
+        }
+    }
 };

@@ -13,9 +13,7 @@ var Authorization = {
             "Username": this.username(),
             "Password": this.password() 
         };
-        var response = await Connection.requestToApi("auth", body, "JSON");
-
-        console.log(response);
+        var response = await Connection.requestToApi("auth", body, "JSON", "POST");
 
         return response;
     },
@@ -25,10 +23,18 @@ var Authorization = {
         var token = response.token;
 
         localStorage.setItem("token",token);
+
+        return response;
     },
 
-    authCostumer: function() {
-        this.saveToken();
+    authCostumer: async function() {
+        var response = await this.saveToken();
+
+        response == "Erro na requisição" ? alert("Login e/ou senha inválidos") : window.location.href = "http://127.0.0.1:5500/home.html";
+    },
+
+    redirectToLoginPage: function() {
+        window.location.href = "http://127.0.0.1:5500/index.html";
     }
 
 };
