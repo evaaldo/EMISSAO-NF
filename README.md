@@ -24,8 +24,8 @@
 <h4>✦ Imagens do frontend</h4>
 
 <ul>
-    <li>Login: <br><img src="./img/Login.png"></img></li>
-    <li>Register: <br><img src="./img/Register.png"></img></li>
-    <li>Home: <br><img src="./img/Home.png"></img></li>
-    <li>Unauthorized: <br><img src="./img/Unauthorized.png"></img></li>
+    <li>Login:<br><img src="./img/Login.png"></img></li>
+    <li>Register:<br><img src="./img/Register.png"></img></li>
+    <li>Home:<br><img src="./img/Home.png"></img></li>
+    <li>Unauthorized:<br><img src="./img/Unauthorized.png"></img></li>
 </ul>
